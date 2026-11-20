@@ -35,29 +35,29 @@ struct FSettings
 		bool bGenerateGObjects = true;
 
 		/// Generate the MD7::Globals::GObjects dump with all property values for each object.
-		bool bGenerateGObjectsWithProps = true;
+		bool bGenerateGObjectsWithProps = false;
 
 		/// Include editor-only metadata (names, tooltips, categories) in the SDK.
 		/// Disable for shipping builds that strip editor data to reduce output size.
 		bool bGenerateEditorOnlyMetadata = false;
 
 		/// Generate C++ SDK headers (packages, classes, structs, enums, functions).
-		bool bGenerateCppSDK = true;
+		bool bGenerateCppSDK = false;
 
 		/// Generate a @c .usmap mapping file for use with Unreal tools.
-		bool bGenerateMapping = true;
+		bool bGenerateMapping = false;
 
 		/// Generate an IDA-compatible mapping script.
-		bool bGenerateIDAMapping = true;
+		bool bGenerateIDAMapping = false;
 
 		/// Generate a Dumpspace-compatible mapping file.
-		bool bGenerateDumpspace = true;
+		bool bGenerateDumpspace = false;
 
 		/// Deflate level used when zipping a completed dump folder, 0-9, where 0
 		/// stores without compressing and 9 is smallest but slowest. A dump is
 		/// almost entirely text, so the default trades a little CPU on device for
 		/// a much smaller archive to transfer off it. Values outside 0-9 are clamped.
-		int32 ZipCompressionLevel = 6;
+		int32 ZipCompressionLevel = 0;
 	} Generator;
 
 	struct EngineCore
